@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0.0",
+  "components": [
+    {
+      "id": "frontend",
+      "friendlyName": "RAG Frontend",
+      "type": "static",
+      "appLocation": "./client",
+      "linkedTo": ["backend"],
+      "outputLocation": "build"
+    },
+    {
+      "id": "backend",
+      "friendlyName": "RAG Backend",
+      "type": "api",
+      "appLocation": "./server",
+      "linkedTo": ["database"],
+      "ingressPort": "80"
+    },
+    {
+      "id": "database",
+      "friendlyName": "Qdrant Database",
+      "type": "database",
+      "resourceType": "qdrant"
+    }
+  ]
+}
